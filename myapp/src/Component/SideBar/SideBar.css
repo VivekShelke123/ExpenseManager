@@ -1,0 +1,31 @@
+div{
+    color: white;
+}
+
+.avtar-container-1{
+    display: flex;
+    justify-content: center;
+    padding-top: 8%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+.user-container h4{
+    padding-top: 0%;
+    margin-top: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.option-container{
+    margin-top: 30%;
+    font-size: 1.5vw;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+ .option-container li{
+    padding: 1%;
+    margin: 2%;
+    list-style: none;
+ }
+ 
