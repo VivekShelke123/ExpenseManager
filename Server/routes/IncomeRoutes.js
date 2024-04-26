@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express = require('express');
+var IncomeDetailsController_1 = require("../controllers/IncomeDetailsController");
+var incomeRouter = express.Router();
+incomeRouter.post('/addIncome', IncomeDetailsController_1.default.addIncomeDetail);
+incomeRouter.get('/getIncome/:userName', IncomeDetailsController_1.default.getIncomeDetails);
+incomeRouter.put('/updateIncome/:userName', IncomeDetailsController_1.default.updateAmount);
+incomeRouter.delete('/deleteIncome/:_id', IncomeDetailsController_1.default.deleteEntry);
+exports.default = incomeRouter;

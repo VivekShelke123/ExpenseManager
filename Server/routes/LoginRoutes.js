@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var LoginController_1 = require("../controllers/LoginController");
+var express = require('express');
+var router = express.Router();
+router.post('/Register', LoginController_1.default.addUser);
+router.post('/Login', LoginController_1.default.getUser);
+router.put('/Update', LoginController_1.default.updateUser);
+router.put('/UpdatePass', LoginController_1.default.updatePass);
+router.get('/getCurr/:userName', LoginController_1.default.getCurr);
+router.put('/updateCurr/:userName', LoginController_1.default.updateCurr);
+exports.default = router;
