@@ -1,0 +1,12 @@
+.header-class{
+    background-color: rgb(168, 194, 225);
+    margin: 0%;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+}
+
+.header-class h2{
+    margin: 0%;
+    font-size: 2vw;
+}

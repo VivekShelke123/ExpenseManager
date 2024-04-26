@@ -23,9 +23,22 @@ div{
     font-family: 'Times New Roman', Times, serif;
 
 }
- .option-container li{
+ .Link-class li{
     padding: 1%;
     margin: 2%;
     list-style: none;
  }
  
+ .Link-class{
+    text-decoration: none;
+    color: white;
+ }
+
+ .Link-class li:hover{
+    background-color: rgb(28, 26, 26);
+    cursor: pointer;
+ }
+
+ .Link-class:active{
+    color: grey;
+ }
