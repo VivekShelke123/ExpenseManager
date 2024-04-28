@@ -1,0 +1,36 @@
+.compo-class div li{
+    font-size: 1.3vw;
+    color: black;
+    list-style: none;
+   border: 1px solid black;
+}
+
+.sum-compo-class{
+    margin-bottom: 2%;
+}
+
+.recent-compo-class{
+    margin-top: 5%;
+}
+
+.recent-compo{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    list-style: none;
+}
+
+.recent-compo p{
+    font-size: 1.2vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+
+.recent-compo p li{
+    padding-right: 4%;
+}
+
+#Title{
+    font-size: 1.8vw;
+    list-style: none;
+}

@@ -35,10 +35,10 @@ div{
  }
 
  .Link-class li:hover{
-    background-color: rgb(28, 26, 26);
+    background-color: #406E8E;
     cursor: pointer;
  }
 
  .Link-class:active{
-    color: grey;
+    color:#DA9F93;
  }

@@ -1,5 +1,6 @@
 .header-class{
-    background-color: rgb(168, 194, 225);
+    background-color: #B569B0;
+    border-radius: 5px;
     margin: 0%;
     height: 9vh;
     display: flex;

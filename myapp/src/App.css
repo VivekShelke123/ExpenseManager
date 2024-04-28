@@ -1,14 +1,23 @@
 .home-container{
   padding-top: 2px;
   display: grid;
-  grid-template-columns: 1.6fr 6fr;
+  grid-template-columns: 1.3fr 6fr;
   height: 99vh;
 }
 
 .grid-col-1{
   border: 2px dotted;
-  background-color: black;
+  background-color: #011C27;
 }
 .grid-col-2{
   border: 2px dotted black;
+  background-color: #9A4C95;
+}
+
+.header-class{
+  margin-bottom: 1%;
+}
+
+.route-class{
+  margin-top: 2%;
 }
