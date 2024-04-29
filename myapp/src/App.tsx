@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import SideBar from "./Component/SideBar/SideBar";
@@ -10,14 +10,22 @@ import LoginForm from "./Component/LoginRegistration/LoginForm";
 import RegistrationForm from "./Component/LoginRegistration/RegistrationForm";
 import Setting from "./Component/Setting/Setting";
 import Profile from "./Component/Profile/Profile";
+import { UserDetails } from "./Store/UserContext";
 
 function App() {
   const [logged, setLogged] = useState<Boolean>(false);
+  const [userName,setUserName] = useState<string>('');
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem('loggedIn');
+    if (isLoggedIn) {
+      setLogged(true);
+    }
+  }, []);
 
   return (
-    <>
-      <div>
-        {logged === true ? (
+    <UserDetails.Provider value={{ logged , setLogged ,userName:userName , setUserName:setUserName}}>
+      
+        {logged === false ? (
           <div>
             <Routes>
               <Route path="/" element={<LoginForm />} />
@@ -35,7 +43,7 @@ function App() {
               </div>
               <div className="route-class">
                 <Routes>
-                  <Route path="/DashBoard" element={<DashBoard />} />
+                  <Route path="/" element={<DashBoard />} />
                   <Route path="/Expense" element={<Expense />} />
                   <Route path="/Income" element={<Income />} />
                   <Route path="/Setting" element={<Setting />} />
@@ -45,8 +53,7 @@ function App() {
             </div>
           </div>
         )}
-      </div>
-    </>
+    </UserDetails.Provider>
   );
 }
 

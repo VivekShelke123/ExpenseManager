@@ -21,6 +21,7 @@ const addExpenseDetail = async (req:Request , res:Response) : Promise<void> => {
         const expenseData = new expenseDetailsSchema({userName:userName , time:time,date:date,month:month,year:year,category:category,spentOn:spentOn,amount:amount,remark:remark }) ;
         const data = await expenseData.save();
         res.status(200).send({ data });
+        console.log(userName);
         
     } catch (error) {
         res.status(500).send(error);

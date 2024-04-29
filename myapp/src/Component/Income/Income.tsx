@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Income.css";
 import AddIncome from './AddIncome';
 import { styled } from "@mui/material/styles";
@@ -15,17 +15,21 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Income :React.FC = () => {
+  const [flag ,setFlag] = useState(true);
+  function setFlagFunc(){
+    setFlag(prev => !prev);
+  }
   return (
     <div>
       <Grid container spacing={1}>
           <Grid xs={5}>
             <Item>
-                <AddIncome/>
+                <AddIncome setFlagFunc={setFlagFunc} />
             </Item>
           </Grid>
           <Grid xs={6.9}>
-            <Item>
-                <RecentIncome/>
+            <Item style={{'maxHeight':'70vh','overflowY':'auto'}}>
+                <RecentIncome flag={flag}/>
             </Item>
           </Grid>
         </Grid>

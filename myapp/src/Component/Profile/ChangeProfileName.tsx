@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const ChangeProfileName: React.FC = () => {
@@ -9,8 +10,20 @@ const ChangeProfileName: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('New Profile Name:', newName);
-    // Add logic to update profile name
+    
+    const data ={
+      userName : localStorage.getItem('userName'),
+      newUserName : newName
+    }
+
+    axios.put('http://localhost:5000/Update',data)
+    .then((res)=>{
+      alert('userName Changed Successfully');
+    })
+    .catch((err)=>{
+      console.error(err);
+    })
+
     setNewName('');
   };
 
