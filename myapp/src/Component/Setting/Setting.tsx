@@ -1,10 +1,9 @@
 import React from 'react';
-import "./Expense.css";
-import AddExpense from './AddExpense';
+import "./Setting.css";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
-import RecentExpense from './RecentExpense';
+import CurrencySelector from './CurrencySelector';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#EBD4CB" : "#EBD4CB",
@@ -14,18 +13,19 @@ const Item = styled(Paper)(({ theme }) => ({
   color: "black",
 }));
 
-const Expense :React.FC = () => {
+
+const Setting : React.FC= () => {
+
   return (
     <div>
       <Grid container spacing={1}>
           <Grid xs={5}>
             <Item>
-                <AddExpense/>
+              <CurrencySelector/>
             </Item>
           </Grid>
           <Grid xs={6.9}>
             <Item>
-                <RecentExpense/>
             </Item>
           </Grid>
         </Grid>
@@ -33,4 +33,4 @@ const Expense :React.FC = () => {
   )
 }
 
-export default Expense
+export default Setting;

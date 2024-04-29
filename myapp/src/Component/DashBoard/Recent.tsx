@@ -20,4 +20,4 @@ const Recent :React.FC<RecentProps> = (props) => {
   )
 }
 
-export default Recent
+export default Recent;

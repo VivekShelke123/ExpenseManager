@@ -1,10 +1,10 @@
 import React from 'react';
-import "./Expense.css";
-import AddExpense from './AddExpense';
+import './Profile.css';
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
-import RecentExpense from './RecentExpense';
+import ChangeProfileName from './ChangeProfileName';
+import ChangePassword from './ChangePassword';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#EBD4CB" : "#EBD4CB",
@@ -14,18 +14,18 @@ const Item = styled(Paper)(({ theme }) => ({
   color: "black",
 }));
 
-const Expense :React.FC = () => {
+const Profile : React.FC = () => {
   return (
     <div>
       <Grid container spacing={1}>
-          <Grid xs={5}>
+          <Grid xs={6}>
             <Item>
-                <AddExpense/>
+              <ChangeProfileName/>
             </Item>
           </Grid>
-          <Grid xs={6.9}>
+          <Grid xs={6}>
             <Item>
-                <RecentExpense/>
+            <ChangePassword/>
             </Item>
           </Grid>
         </Grid>
@@ -33,4 +33,4 @@ const Expense :React.FC = () => {
   )
 }
 
-export default Expense
+export default Profile
